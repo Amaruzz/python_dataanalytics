@@ -1,5 +1,3 @@
-a=[1,2,3,4,5,6,7]
-
-b=a.copy() ##Shallow copy
-b[0]=100
-print(a)
+p = open("superman.txt",'a')
+p.write("Now I am appending some content inside the file")
+p.close()
