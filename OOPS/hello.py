@@ -1,15 +1,14 @@
-class Demo:
-    def __init__(self):
-        self.name="Amarjith"  #Public
-        self._age=21          #Protected
-        self.__salary=50000    #Private
+def decorate(func):
+    def wrapper(a,b):
+       print("the addition to u r number are")
+       func(a,b)
+       print("Thankyou I hope u liked it")
+    return wrapper
 
-    def show(self):
-        print("Inside the class")
-        print("Public:",self.name )
-        print("Protected:",self._age )
-        print("Private:",self.__salary )
+ 
 
+@decorate
+def addition(a,b):
+    print(f" Your total is{a+b}")
 
-obj=Demo()
-print(obj.show())      
+addition(12,67)
